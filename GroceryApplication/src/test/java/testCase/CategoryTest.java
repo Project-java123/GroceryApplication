@@ -30,7 +30,7 @@ public class CategoryTest extends BaseClass {
 	}
 
 	@Test(priority=2)
-	public void verifyStatusMsgSWhileStatusChangedSuccessfully() throws InvalidFormatException, IOException {
+	public void verifyStatusMsgWhileStatusChangedSuccessfully() throws InvalidFormatException, IOException {
 		lp = new LoginPage(driver);
 		ap = lp.login(groceryData(1, 0), groceryData(1, 1));
 		cp = ap.clickonCategoryPage();
@@ -38,7 +38,7 @@ public class CategoryTest extends BaseClass {
 		String actualSearch = cp.isStatusChangedsuccessfully();
 		String expectedSearch = "Category Status Changed Successfully";
 		boolean b = actualSearch.contains(expectedSearch);
-		Assert.assertTrue(b, Constant.cp_verifyStatusMsgSWhileStatusChangedSuccessfully);
+		Assert.assertTrue(b, Constant.cp_verifyStatusMsgWhileStatusChangedSuccessfully);
 
 	}
 }

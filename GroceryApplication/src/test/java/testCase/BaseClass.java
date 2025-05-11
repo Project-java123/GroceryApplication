@@ -22,7 +22,6 @@ public class BaseClass {
 	WebDriver driver; // driver declared as instance variable
 	ScreenShotCapture sc;
 	LoginPage lp;
-	
 	public static Properties pro;
 
 	public static void testBasic() throws IOException {
@@ -33,10 +32,10 @@ public class BaseClass {
 	}
 
 	public static String groceryData(int row, int column) throws IOException, InvalidFormatException {
-		String data = ExcelUtility.readDataFromExcel(row, column,
-				"\\src\\test\\resources\\excel\\login.xlsx", "sheet1");
-		return data;  
-	} 
+		String data = ExcelUtility.readDataFromExcel(row, column, "\\src\\test\\resources\\excel\\login.xlsx",
+				"sheet1");
+		return data;
+	}
 
 	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
@@ -50,7 +49,6 @@ public class BaseClass {
 			driver = new FirefoxDriver();
 		}
 
-		
 		driver.get(pro.getProperty("baseurl"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constant.implicitwaitTIMEOUT));
@@ -65,5 +63,4 @@ public class BaseClass {
 		driver.quit();
 	}
 
-	
 }

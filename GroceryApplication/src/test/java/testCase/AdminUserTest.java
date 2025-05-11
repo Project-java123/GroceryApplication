@@ -26,7 +26,7 @@ public class AdminUserTest extends BaseClass {
 	}
 
 	@Test(priority = 2)
-	public void verifyStatusMsgSWhileStatusChangedSuccessfully() throws InvalidFormatException, IOException {
+	public void verifyStatusMsgWhileStatusChangedSuccessfully() throws InvalidFormatException, IOException {
 		lp = new LoginPage(driver);
 		ap = lp.login(groceryData(1, 0), groceryData(1, 1));
 		aup = ap.clickonAdminUserPage();
@@ -34,7 +34,7 @@ public class AdminUserTest extends BaseClass {
 		String actualStatusMessage = aup.getStatusAlertMessage();
 		String expectedStatusMessage = "User Status Changed Successfully";
 		boolean actual = actualStatusMessage.contains(expectedStatusMessage);
-		Assert.assertTrue(actual, Constant.aup_verifyUserStatusChangedSuccessfully);
+		Assert.assertTrue(actual, Constant.aup_verifyStatusMsgWhileStatusChangedSuccessfully);
 	}
 
 	@Test(priority = 3)
@@ -46,7 +46,7 @@ public class AdminUserTest extends BaseClass {
 		String actualUpdateMessage = aup.getupdateAlertMessage();
 		String expectedUpdateMessage = "User Updated Successfully";
 		boolean b = actualUpdateMessage.contains(expectedUpdateMessage);
-		Assert.assertTrue(b, Constant.aup_verifyUserIsUpdatedSuccessfully);
+		Assert.assertTrue(b, Constant.aup_verifyUpdateMsgWhileUpdatedSuccessfully);
 	}
 
 	@Test(priority = 4)
@@ -58,7 +58,7 @@ public class AdminUserTest extends BaseClass {
 		String actualDeleteMessage = aup.getdeleteAlertMessage();
 		String expectedDeleteMessage = "User Deleted Successfully";
 		boolean actual = actualDeleteMessage.contains(expectedDeleteMessage);
-		Assert.assertTrue(actual, Constant.aup_verifyUserIsDeletedSuccessfully);
+		Assert.assertTrue(actual, Constant.aup_verifyAlertMsgWhileDeletedSuccessfully);
 	}
 
 	@Test(priority = 5)

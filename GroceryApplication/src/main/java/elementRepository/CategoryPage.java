@@ -21,7 +21,7 @@ public class CategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "/html/body/div/div[1]/section/div[1]/a[2]")
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']")
 	WebElement searchButton;
 	@FindBy(xpath = "//input[@name='un']")
 	WebElement categoryField;
@@ -36,7 +36,7 @@ public class CategoryPage {
 
 	public void categorySearch() {
 		searchButton.click();
-		categoryField.sendKeys("grocery");
+		categoryField.sendKeys("Markus");
 		gu.pageScroll(0, 500, driver);
 		searchCategory.click();
 	}
@@ -47,7 +47,7 @@ public class CategoryPage {
 
 	public CategoryPage statusChange() {
 		List<WebElement> CategoryCell = driver.findElements(By.xpath("//table/tbody/tr/td[1]"));
-		String Categoryname = "Luella";
+		String Categoryname = "Groceries";
 		for (int i = 0; i < CategoryCell.size(); i++) {
 			if (CategoryCell.get(i).getText().equals(Categoryname)) {
 				String locator = "//table/tbody/tr[" + (i + 1) + "]/td/a/span[contains(@class, 'badge')]";

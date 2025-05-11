@@ -9,17 +9,13 @@ public class Constant {
 	public static final String mp_verifyAlertMsgWhileNewsIsUpdatedSuccessfully="News Updation Failed";
 	public static final String mp_verifyAlertMsgWhileNewsIsDeletedSuccessfully="News Deletion Failed";
 	public static final String mp_verifyAlertMsgWhileNewsIsSearchedSuccessfully="News Search Failed";	
-	public static final String aup_verifyUserStatusChangedSuccessfully="Status change failed";
-	public static final String aup_verifyUserIsUpdatedSuccessfully="user updation failed";
-	public static final String aup_verifyUserIsDeletedSuccessfully="user deletion failed";
+	public static final String aup_verifyStatusMsgWhileStatusChangedSuccessfully="Status change failed";
+	public static final String aup_verifyUpdateMsgWhileUpdatedSuccessfully="user updation failed";
+	public static final String aup_verifyAlertMsgWhileDeletedSuccessfully="user deletion failed";
 	public static final String aup_verifyUserIsSearchedSuccessfully="user search failed";
-	public static final String aup_verifyResetToAdminUserPageSuccessfully="URL did not redirect to Admin page as expected";
-	public static final String scp_verifyUserIsAbleToAddSubCategory="Subcategory creation failed";
-	public static final String scp_verifyUserIsAbleToUpateSubCategory ="Subcategory updation failed";
-	public static final String scp_verifyUserIsAbleToSearchSubCategory="Subcategory search failed";
-	public static final String scp_verifyUserIsAbleToDeleteSubCategory ="Subcategory deletion failed";
+	public static final String aup_verifyResetToAdminUserPageSuccessfully="URL did not redirect to Admin page as expected";	
 	public static final String cp_verifyUserIsSearchedAndDisplayedSuccessfully ="Failed to find the searched item";
-	public static final String cp_verifyStatusMsgSWhileStatusChangedSuccessfully ="Status change failed";
+	public static final String cp_verifyStatusMsgWhileStatusChangedSuccessfully ="Status change failed";
 	public static final String mcp_verifyUpdateMsgWhileContactIsUpdatedSuccessfully ="Update failed";
 	public static final String mf_verifyUpdateMsgWhileFooterTextIsUpdatedSuccessfully="Update failed";
 

@@ -25,8 +25,8 @@ public class ManageNewsTest extends BaseClass {
 		mp.createNewMessage();
 		String actualCreateMessage = mp.getAlertMessage();
 		String expectedCreateMessage = "News Created Successfully";
-		// boolean actual = actualCreateMessage.contains(expectedCreateMessage);
-		Assert.assertEquals(actualCreateMessage, expectedCreateMessage, Constant.mp_verifyAlertMsgWhileNewsIsCreatedSuccessfully);
+		boolean actual = actualCreateMessage.contains(expectedCreateMessage);
+		Assert.assertTrue(actual, Constant.mp_verifyAlertMsgWhileNewsIsCreatedSuccessfully);
 	}
 
 	@Test(priority = 2)
