@@ -25,9 +25,7 @@ public class Adminpage {
 	@FindBy(xpath = "//li[4]/a[@class=' nav-link']")
 	WebElement manageContactTab;
 	@FindBy(xpath = "/html/body/div/div[1]/section/div/div/div[1]/div/a")
-	WebElement manageAdminUserTab;
-	@FindBy(xpath = "//section/div/div/div[4]/div/a")
-	WebElement manageSubCategoryTab;
+	WebElement manageAdminUserTab;	
 	@FindBy(xpath="//section/div/div/div[3]/div/a")
 	WebElement manageCategoryTab;
  
@@ -59,10 +57,5 @@ public class Adminpage {
 	public CategoryPage clickonCategoryPage() {
 		manageCategoryTab.click();
 		return new CategoryPage(driver);
-	}
-
-	public Sub_CategoryPage clickOnSubCategoryPage() {
-		manageSubCategoryTab.click();
-		return new Sub_CategoryPage(driver);
 	}
 }
