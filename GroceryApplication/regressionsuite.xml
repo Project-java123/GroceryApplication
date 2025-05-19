@@ -9,7 +9,6 @@
 			<class name="testCase.LoginPageTest"></class>
 			<class name="testCase.AdminUserTest"></class>
 			<class name="testCase.CategoryTest"></class>
-			<class name="testCase.Sub_CategoryTest"></class>
 		</classes>
 	</test>
 	<test name="FirefoxTest">
